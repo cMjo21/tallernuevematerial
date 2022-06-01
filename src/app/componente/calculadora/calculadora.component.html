@@ -1,0 +1,62 @@
+
+
+<div class="container "> 
+
+   
+    <div class=" form-group my-5">
+      <div class="row">
+       <div class="col-6 col-sm-3 num1"><label for="">Número 1</label>
+         <input type="number" class="form-group form-control" placeholder="Ingrese un número" [(ngModel)]="num1" [(ngModel)]="searchValue" ></div>
+       <div class="col-6 col-sm-3 num1"><label for="">Número 2</label>
+         <input type="number" class=" form-group form-control" placeholder="Ingrese un número" [(ngModel)]="num2" [(ngModel)]="searchValue2" ></div>
+   
+       <!-- Force next columns to break to new line -->
+       <div class="w-100"></div>
+   
+       <div class="col-6 col-sm-3 num1">
+                
+         <input type="Button" value="sumar" class="btn btn-primary m-1 "  (click)="sumar()" >
+         <input type="Button" value="restar" class="btn btn-success m-1" (click)="resta()">
+         <input type="Button" value="multi "class="btn btn-warning m-1" (click)="multiplica()">
+         <input type="Button" value="dividir" class="btn btn-secondary bm-1"(click)="dividir()"></div>
+       <div class="col-6 col-sm-3 num1 " > <label for="">Este es el Resultado</label>
+        <span > <h1  [(ngModel)]="searchValue3">{{resultado}}</h1></span >
+        
+         <button type="button" (click)="borrar()"  class="btn btn-danger" >Borrar</button>
+        
+      </div>
+        </div>
+    </div>
+
+ 
+  <h1>Programa de: {{titulo}}</h1>
+<div *ngIf="mensaje_ok">
+<div class="alert alert-success alert-dismissible fade show" role="alert" >
+  <strong>{{mensaje_ok}}  <i class="bi bi-hand-thumbs-up"></i></strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+
+
+<div *ngIf="mensaje_error">
+<div class="alert alert-danger alert-dismissible fade show" role="alert" >
+  <strong>{{mensaje_error}}<i class="bi bi-hand-thumbs-down"></i></strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+
+
+<div *ngIf="mensaje_numero_negativo">
+<div class="alert alert-warning alert-dismissible fade show" role="alert" >
+  <strong>{{mensaje_numero_negativo}}<i class="bi bi-exclamation-triangle"></i></strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+ 
+  
+  
+</div>
+
+
+
+

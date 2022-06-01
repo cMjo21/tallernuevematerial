@@ -1,0 +1,45 @@
+
+
+<mat-toolbar class="colorbarra ">
+   
+    <button  mat-icon-button class="colorbarra " aria-label="Example icon-button with menu icon" >
+    <button mat-icon-button  class="colorbarra" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+     <mat-icon >more_vert</mat-icon>
+   </button>
+   <mat-menu #menu="matMenu">
+    <button mat-menu-item class="colorbarra " routerLink ="/inicio">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <span>INICIO</span>
+  </button>
+    <button mat-menu-item class="colorbarra"routerLink ="/calculadora">
+    <span class="material-icons">
+    calculate 
+    </span>
+     <span>Calculadora</span>
+     </button>
+    <button mat-menu-item  class="colorbarra" routerLink="/formulario">
+    <span class="material-icons">
+    content_paste
+    </span>
+     <span>Formulario</span>
+    </button>
+    <button mat-menu-item class="colorbarra" routerLink="/presentacion">
+    <span class="material-icons">
+    info
+    </span>
+      <span>Presentación</span>
+    </button>
+   </mat-menu>
+ </button>
+   
+  
+
+   <span>taller9</span>
+   <span class="example-spacer"></span>
+   <button mat-icon-button class="colorbarra" aria-label="Example icon-button with heart icon">
+     <mat-icon>favorite</mat-icon>
+   </button>
+   <button mat-icon-button class="colorbarra" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+ </mat-toolbar>
